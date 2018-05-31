@@ -12,18 +12,20 @@ var SoFar = [];
         g = letters[Math.floor(Math.random()*letters.length)];
       }
       else{
-        if(GL===0){
+        if(GL<2){
           losses = losses+1;
           GL = 9;
           g = letters[Math.floor(Math.random()*letters.length)];
+          SoFar = [];
         }
         else{
         GL=GL-1;
         SoFar.push(String(Guess));  
-        document.getElementById("Guesses").innerHTML = SoFar;
         } 
       }
       document.getElementById("GL").innerHTML = GL;
       document.getElementById("Wins").innerHTML = wins;
       document.getElementById("Losses").innerHTML = losses; 
+      document.getElementById("Guesses").innerHTML = SoFar;
+
     }
