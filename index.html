@@ -1,0 +1,30 @@
+ <!DOCTYPE html>
+ <html lang="en-us">
+ 
+ <head>
+   <meta charset="UTF-8">
+   <title>Psychic Game</title>
+   <script type="text/javascript" src="assets/javascript/game.js"></script>
+ </head>
+<body>
+ 
+    <h1>Guess What Letter I am Thinking Of!</h1>
+      <p>Wins:<span id="Wins"></span></p>
+      <p>Losses:<span id="Losses"></span></p>
+      <p>Guesses Left:<span id="GL"></span></p>
+      <p>Guesses so far:<span id="Guesses"></span></h2>
+ 
+  </body>
+ <script>
+    document.getElementById("GL").innerHTML = GL;
+    document.getElementById("Wins").innerHTML = wins; 
+    document.getElementById("Losses").innerHTML = losses; 
+
+    
+    document.onkeyup = function(e) {
+      let Guess = e.key;
+      myFunction(Guess);
+    }
+ </script>
+ 
+ </html>
